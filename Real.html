@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body{
+            background-color: #f8f8f8;
+        }
+        .imagen-central {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col h-screen justify-between">
+    <header class="bg-green-500 text-white p-4 text-center">
+        <h1 class="text-xl font-bold">Bienvenido a su asistente personal</h1>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center">
+        <p class="text-lg text-center">Puede interactuar con el ChatBot precionando el boton de abrir </p>
+    </main>
+    
+    <img src="Robot Ayudante.jpg "  width="300" height="200" class="imagen-central">
+
+    <div class="gap-2 flex justify-around m-6 z-20">
+        <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded" onclick="botpress.open()">Abrir</button>
+        <button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded" onclick="botpress.close()">Cerrar</button>
+        <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded" onclick="botpress.config({configuration: {botName:'Asistente Personal', botDescription: 'Descripción actualizada' }})">Configuración</button>
+        <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded" onclick="botpress.sendMessage('Hola nesesito ayuda ')">Enviar Mensaje</button>
+    </div>
+
+    <script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/10/25/19/20241025193913-GH51HQAV.js"></script>
+</body>
+
+</html>
